@@ -1,0 +1,376 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;400;500;600&family=Montserrat:wght@400;500;600;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+
+/* 기본설정 */
+.hidden{
+  width:1px; height:1px; font-size:0px; line-height:0px;
+  position:absolute;
+}
+
+.blurEffect{
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+}
+
+/* reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6 {font-weight: 700; font-size: inherit;}
+a {color: inherit; text-decoration: inherit;}
+img {vertical-align: middle;}
+a img {border: none;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+a:focus {outline: none}
+button:focus {outline: none}
+
+body{
+  color: #e32412; font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 색상전환 */
+/* .allWrap{
+  background: rgb(36, 2, 228);
+}
+.allWrap .change_c{
+  mix-blend-mode: luminosity;
+} */
+ /* layout */
+ /* 비쥬얼영역 */
+section.visual_wrap{
+  width: 100%;
+  background: linear-gradient(#f2f2f2 95%, #ffffff);
+
+}
+div.visual_inner{
+  width: 90%; height: 100%;
+  margin: 0 auto;
+  padding: 100px 0 200px; box-sizing: border-box;
+}
+div.visual_inner .title{
+  font-size: 70px; font-family: 'Montserrat', sans-serif; font-weight: 600;
+  line-height: 70px; margin-bottom: 24px;
+}
+div.visual_inner .title span{
+  font-size: 60px; font-weight: 500;
+}
+div.visual_inner h1{
+  font-family: 'Hahmlet', serif; font-size: 38px; font-weight: 500;
+  margin-bottom: 150px;
+}
+div.bottom_box{
+  width: 100%; display: flex;
+  position: relative;
+}
+div.bottom_box .circle{
+  display: block; margin: 0 auto;
+  width: 300px; height: 300px;
+  background: radial-gradient(#160000, #691812, #c72a1f, #ff5748); border-radius: 50%; 
+}
+div.bottom_box .small_circle{
+  display: block;
+  position: absolute;
+  top: 40px; left: 50%; transform: translateX(-50%);
+  width: 50px; height: 50px;
+  background: radial-gradient(#160000, #691812, #c72a1f, #ff5748); border-radius: 50%; 
+}
+div.bottom_box .right_box{
+  position: absolute;top: 0; right: 0;
+}
+div.bottom_box .right_box .tit{
+  font-family: 'Montserrat', sans-serif; 
+  font-size: 30px; font-weight: 800;
+  margin-bottom: 16px;
+}
+div.bottom_box .right_box .txt{
+  font-size: 18px;
+  margin-bottom: 41px;
+}
+div.bottom_box .right_box .b{
+  font-size: 26px;
+  font-family: 'Montserrat', sans-serif; 
+}
+div.bottom_box .right_box img{
+  display: inline-block;
+  margin-right: 20px;
+}
+@keyframes top_ani{
+  0%{transform: scale(1);}
+  50%{transform: scale(0.9);}
+}
+div.bottom_box .circle{
+  animation-name: top_ani; animation-duration: 5s;
+  animation-direction: alternate; animation-iteration-count: infinite;
+}
+
+/* 행사소개영역 */
+section.info_wrap{
+  width: 100%;
+  background: #fff;
+}
+div.info_inner{
+  width: 90%; margin: 0 auto;
+  padding: 100px 0;
+}
+div.info_inner .info_contents{
+  width: 55%; margin: 0 auto;
+}
+div.info_inner .info_contents img{
+  width: 100%; margin-bottom: 100px;
+}
+div.info_inner .info_contents .info_text{
+  width: 100%; font-size: 20px; line-height: 1.5;
+  text-align: justify;
+}
+div.info_inner .info_contents .ko{
+  font-weight: bold;
+  margin-bottom: 26px;
+}
+div.info_inner .info_contents .en{
+  font-family: 'Montserrat', sans-serif; 
+}
+
+/* 프로그램영역 */
+section.program_wrap{
+  width: 100%;
+  background: #e32412; color: #ffffff;
+}
+div.program_inner{
+  width: 90%; margin: 0 auto;
+}
+div.program_inner .program_title{
+  padding: 102px 78px; box-sizing: border-box;
+  font-size: 72px; font-family: 'Montserrat', sans-serif; 
+}
+div.program_inner .program_list{
+  width: 100%; padding-bottom: 102px;
+}
+div.program_inner .program_list li{
+  width: 100%; 
+  display: flex;
+  padding: 78px 78px; box-sizing: border-box;
+  border-top: 1px solid #ffffff;
+  font-family: 'Montserrat', sans-serif; 
+  text-align: justify;
+}
+div.program_inner .program_list li:last-child{
+  border-bottom: 1px solid #ffffff;
+}
+div.program_inner .program_list li .num{
+  width: 10%;
+  font-size: 72px;
+}
+div.program_inner .program_list li .tit{
+  width: 25%;
+  font-size: 26px; font-weight: bold;
+}
+div.program_inner .program_list li .tit_kor{
+  font-family: 'Hahmlet', serif;
+}
+div.program_inner .program_list li .txt{
+  width: 65%;
+  font-size: 18px; line-height: 1.6;
+}
+div.program_inner .program_list li .txt_kor{
+  font-family: 'Noto Sans KR', sans-serif; font-size: 20px;
+  display: inline-block;
+  margin-bottom: 9px;
+}
+
+/* 접수일정영역 */
+section.deadline_wrap{
+  width: 100%;
+  padding: 124px 0; box-sizing: border-box;
+  background: #fff;
+}
+div.deadline_inner{
+  width: 82%; margin: 0 auto;
+  position: relative;
+}
+div.deadline_inner .deadline_title{
+  font-size: 72px; font-family: 'Montserrat', sans-serif; 
+  margin-bottom: 58px;
+}
+div.deadline_inner .deadline_title span{
+  font-family: 'Hahmlet', serif;
+}
+div.deadline_inner .sub_title{
+  font-size: 36px;
+  font-weight: bold;
+}
+div.deadline_inner .sub_title span{
+  font-size: 16px; font-weight: normal; display: block;
+  margin-bottom: 38px;
+}
+div.deadline_inner .deadline_text_kor{
+  width: 58%; margin-bottom: 38px;
+}
+div.deadline_inner .deadline_text_kor li{
+  width: 100%;
+  display: flex;
+  font-size: 20px; line-height: 1.7;
+}
+div.deadline_inner .deadline_text_kor li .tit{
+  width: 12%;
+  font-weight: bold;
+}
+div.deadline_inner .deadline_text_kor li .txt{
+  width: 88%;
+}
+div.deadline_inner .deadline_text_kor li .txt span{
+  font-size: 14px;
+}
+
+span.circle_b{
+  position: absolute; top: 231px; right: 0px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  display: inline-block;
+  z-index: 1;
+  background: #e32412;
+
+  animation-name: circle_ani;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+span.circle_1{
+  width: 200px; height: 200px;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  position: absolute; top: 230px; right: 0;
+  z-index: 1;
+
+
+  animation-name: circle_ani_t;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-iteration-count:infinite;
+}
+span.circle_2{
+  width: 200px; height: 200px;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  position: absolute; top: 230px; right: 0;
+
+  animation-name: circle_ani_b;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-iteration-count:infinite;
+}
+
+
+@keyframes circle_ani_t{
+  0%{
+    top: 230px;
+  }
+  15%{
+    top: 230px;
+  }
+  100%{
+    top: 180px;
+  }
+}
+@keyframes circle_ani_b{
+  0%{
+    top: 230px;
+  }
+  15%{
+    top: 230px;
+  }
+  100%{
+    top: 280px;
+  }
+}
+@keyframes circle_ani{
+  0%{
+    top: 231px;
+  }
+  100%{
+    top: 236px;
+  }
+}
+div.deadline_inner .deadline_text_eng{
+  width: 100%;
+  background: #fafafa;
+  padding: 0 28px; 
+  box-sizing: border-box;
+  line-height: 1.7;
+}
+div.deadline_inner .deadline_text_eng .txtBox{
+  width: 99%; margin: 0 auto;
+  font-size: 20px; 
+  border-bottom: 1px solid #ebebeb;
+  padding: 28px 0; box-sizing: border-box;
+}
+div.deadline_inner .deadline_text_eng .txtBox:last-child{
+  border-bottom: none;
+}
+div.deadline_inner .deadline_text_eng .txtBox .tit{
+  font-weight: bold; 
+  margin-bottom: 14px;
+}
+
+/* 다운로드영역 */
+div.download_wrap{
+  width: 100%;
+  display: flex;
+  background: #fff;
+}
+div.download_wrap a{
+  width: 25%; height: 100px;
+  display: block;
+  text-align: center;
+  line-height: 100px;
+  border-top: 1px solid #e32412;
+  border-bottom: 1px solid #e32412;
+  border-right: 1px solid #e32412;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+/* hover */
+div.download_wrap a:hover{
+  background: #fff7f7;
+  transition: all 0.2s;
+}
+div.download_wrap a:last-child{
+  border-right: none;
+}
+
+/* 푸터영역 */
+footer.footer_wrap{
+  width: 100%;
+  padding: 58px 0; 
+  background: #fff;
+}
+div.footer_inner{
+  width: 90%; margin: 0 auto;
+}
+div.footer_inner ul{
+  width: 100%;
+  display: flex;
+}
+div.footer_inner ul .leftBox{
+  width: 50%;
+}
+div.footer_inner ul .leftBox .contact_top{
+  font-family: 'Montserrat', sans-serif; 
+  margin-bottom: 9px;
+}
+div.footer_inner ul .rightBox{
+  width: 50%;
+  text-align: right;
+}
+div.footer_inner ul .rightBox img{
+  display: inline-block;
+  margin-bottom: 32px;
+}
+div.footer_inner ul .rightBox span{
+  display: block;
+}
